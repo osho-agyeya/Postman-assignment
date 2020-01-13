@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Postman Assignment</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  </head>  
+
+  <body style="padding-left:25px">
+  	<div align="center">
+      <h2>Postman Assignment</h2>
+      <hr style="border-top:1px solid #DCDCDC;border-bottom: 1px solid #ffff;">
+      <h3 align="left">Please enter the term to be searched on Youtube:</h2><br>
+      	<form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data"> 
+            <div class="form-group">
+              <input type="text" class="form-control" align="center" name="search_term" aria-describedby="fileHelp" required />
+            </div>
+            <input type="submit" class="btn btn-primary" value="Show results!">
+      	</form>
+    </div>
+     <br>
+     <hr style="border-top:1px solid #DCDCDC;border-bottom: 1px solid #ffff;">
+	<div>
+	  {% for table in tables %}
+	    <h2>Results(Top 50 displayed):</h2>
+	    {{ table|safe }}
+	  {% endfor %}
+	</div>
+  </body>
+</html>
