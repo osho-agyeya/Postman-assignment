@@ -18,3 +18,5 @@ Assuming that the OS is Windows/MacOS/Linux with python installed. The PC should
 11.)You may type any other query to see the results again.
 12.)Once done, please go to the terminal from step 3 and press Ctrl+C to cancel the running process.
 13.)The connection to Youtube API has been done by creating a project on Google cloud console.(screenshot_4).
+
+![](/Solution/screenshot_3.jpg)
